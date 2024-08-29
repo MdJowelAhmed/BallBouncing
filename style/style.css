@@ -12,6 +12,7 @@ body {
 }
 ul {
 display: flex;
+border-bottom: 15px solid blue;
 }
 ul li {
     width: 40px;
@@ -20,4 +21,56 @@ ul li {
     background-color: blue;
     margin: auto 20px;
     border-radius: 50%;
+    animation: bouncing 1s linear infinite alternate-reverse;
+    /* animation: bgChange 10s linear infinite; */
+}
+/* @keyframes bgChange {
+    0%{
+        background-color: red;
+    }
+    25%{
+        background-color: green;
+    }
+    50%{
+        background-color: yellow;
+    }
+    75%{
+        background-color: blue;
+    }
+    100%{
+        background-color: red;
+    }
+} */
+@keyframes bouncing {
+    0%{
+        transform: translateY(0);
+    }
+    50%{
+        transform: translateY(-150px);
+    }
+    100%{
+        transform: translateY(0);
+    }
+}
+
+ul li:nth-child(2){
+    animation-delay: 0.2s;
+}
+ul li:nth-child(3){
+    animation-delay: 0.4s;
+}
+ul li:nth-child(4){
+    animation-delay: 0.6s;
+}
+ul li:nth-child(5){
+    animation-delay: 0.8s;
+}
+ul li:nth-child(6){
+    animation-delay: 0.6s;
+}
+ul li:nth-child(7){
+    animation-delay: 0.4s;
+}
+ul li:nth-child(8){
+    animation-delay: 0.2s;
 }
